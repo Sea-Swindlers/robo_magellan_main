@@ -1,0 +1,24 @@
+<sdf version='1.6'>
+  <model name='rover_lidar'>
+    <include>
+      <uri>model://rover</uri>
+    </include>
+
+    <include>
+      <uri>model://rplidar</uri>
+      <pose>1.5 0 .5 0 0 0</pose>
+    </include>
+
+    <joint name="lidar_joint" type="revolute">
+      <parent>rover::base_link</parent>
+      <child>rplidar::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+  </model>
+</sdf>
