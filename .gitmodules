@@ -4,6 +4,3 @@
 [submodule "mavros"]
 	path = mavros
 	url = https://github.com/mavlink/mavros.git
-[submodule "px4_autopilot"]
-	path = px4_autopilot
-	url = git@github.com:PX4/PX4-Autopilot.git
