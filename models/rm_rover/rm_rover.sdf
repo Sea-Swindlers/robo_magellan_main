@@ -1,5 +1,5 @@
 <sdf version='1.6'>
-  <model name='rover_lidar'>
+  <model name='rm_rover'>
     <include>
       <uri>model://rover</uri>
     </include>
