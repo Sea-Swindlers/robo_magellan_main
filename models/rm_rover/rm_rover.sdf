@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <sdf version='1.6'>
   <model name='rm_rover'>
     <include>
@@ -8,7 +9,6 @@
       <uri>model://rplidar</uri>
       <pose>1.5 0 .5 0 0 0</pose>
     </include>
-
     <joint name="lidar_joint" type="revolute">
       <parent>rover::base_link</parent>
       <child>rplidar::link</child>
@@ -20,5 +20,22 @@
         </limit>
       </axis>
     </joint>
+
+    <include>
+      <uri>model://zed</uri>
+      <pose>1.6 0 .75 0 0 0</pose>
+    </include>
+    <joint name="depth_camera_joint" type="revolute">
+      <parent>rover::base_link</parent>
+      <child>zed::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+
   </model>
 </sdf>
