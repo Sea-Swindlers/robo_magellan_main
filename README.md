@@ -47,7 +47,6 @@ cd src/scripts
 source setup_paths.sh
 cd <PX4-Autopilot_clone>
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:$(pwd)/Tools/sitl_gazebo/build
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(pwd)/Tools/sitl_gazebo/models
 export GAZEBO_MODEL_DATABASE_URI=""
 roslaunch gazebo_ros empty_world.launch
 ```
@@ -59,7 +58,7 @@ rostopic list
 ```
 and make sure that data is being published to the following topics:
 ```
-/bumper/raw # You will need to drag an object towards the bumper for it to start publishing data
+/bumper/raw
 /laser/scan
 /ultrasonic_sensor_1/reading
 /ultrasonic_sensor_2/reading
@@ -76,7 +75,6 @@ source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:$(pwd)/Tools/sitl_gazebo/build
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(pwd)/Tools/sitl_gazebo/models
 export GAZEBO_MODEL_DATABASE_URI=""
 roslaunch px4 posix_sitl.launch world:="$RM_WORLDS_PATH/worlds/baylands.world" vehicle:="rover" sdf:="$RM_MODELS_PATH/rm_rover/rm_rover.sdf"
 ```
