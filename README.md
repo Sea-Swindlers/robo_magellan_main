@@ -8,7 +8,8 @@ git clone git@github.com:Sea-Swindlers/robo_magellan_main.git src
 cd src
 git submodule init
 git submodule update
-source ./setup_paths.sh
+cd scripts
+source setup_paths.sh
 ```
 To install other depandancies:
 ```
