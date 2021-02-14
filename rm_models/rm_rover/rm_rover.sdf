@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='rm_rover'>
     <include>
-      <uri>model://rover</uri>
+      <uri>model://rm_rover_base</uri>
     </include>
 
     <include>
@@ -10,7 +10,7 @@
       <pose>1.5 0 .5 0 0 0</pose>
     </include>
     <joint name="lidar_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>rm_rplidar::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -26,7 +26,7 @@
       <pose>1.6 0 .75 0 0 0</pose>
     </include>
     <joint name="depth_camera_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>rm_zed::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -42,7 +42,7 @@
       <pose>1.7 0 .3 0 0 0</pose>
     </include>
     <joint name="bumper_sensor_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>rm_bumper_sensor::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -59,7 +59,7 @@
       <pose>1.6 0 .4 0 -0.261799 0</pose>
     </include>
     <joint name="ultrasonic_sensor_1_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>ultrasonic_sensor_1::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -76,7 +76,7 @@
       <pose>1.6 .3 .4 0 -0.261799 0.523599</pose>
     </include>
     <joint name="ultrasonic_sensor_2_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>ultrasonic_sensor_2::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -93,7 +93,7 @@
       <pose>1.6 -.3 .4 0 -0.261799 -0.523599</pose>
     </include>
     <joint name="ultrasonic_sensor_3_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>ultrasonic_sensor_3::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -110,7 +110,7 @@
       <pose>1.5 0 .2 0 0 0</pose>
     </include>
     <joint name="ultrasonic_sensor_4_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>ultrasonic_sensor_4::link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -127,7 +127,7 @@
       <pose>1.5 0 .2 0 0 0</pose>
     </include>
     <joint name="ultrasonic_sensor_5_joint" type="revolute">
-      <parent>rover::base_link</parent>
+      <parent>rm_rover_base::base_link</parent>
       <child>ultrasonic_sensor_5::link</child>
       <axis>
         <xyz>0 0 1</xyz>
