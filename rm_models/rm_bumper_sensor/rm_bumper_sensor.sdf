@@ -40,8 +40,8 @@
         <contact>
           <collision>bumper_collision</collision>
         </contact>
-        <plugin name="benchmarking_bumper" filename="libgazebo_ros_bumper.so">
-          <bumperTopicName>benchmarker/collision</bumperTopicName>
+        <plugin name="bumper_raw" filename="libgazebo_ros_bumper.so">
+          <bumperTopicName>bumper/raw</bumperTopicName>
         </plugin>
       </sensor>
 

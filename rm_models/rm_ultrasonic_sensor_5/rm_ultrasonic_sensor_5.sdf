@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <model name="rm_ultrasonic_sensor">
+  <model name="rm_ultrasonic_sensor_5">
     <link name="link">
-      <collision name='ultrasonic_sensor_collision'>
+      <collision name='ultrasonic_sensor_5_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
@@ -11,7 +11,7 @@
         </geometry>
       </collision>
 
-      <visual name='ultrasonic_sensor_visual'>
+      <visual name='ultrasonic_sensor_5_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
@@ -20,7 +20,7 @@
         </geometry>
       </visual>      
       
-      <sensor type="ray" name="ultrasonic_sensor">
+      <sensor type="ray" name="ultrasonic_sensor_5">
         <pose>0 0 0 0 0 0</pose>
         <visualize>true</visualize>
         <update_rate>50</update_rate>
@@ -40,8 +40,8 @@
               </vertical>
            </scan>
            <range>
-              <min>0.01</min>
-              <max>2</max>
+              <min>0.02</min>
+              <max>4</max>
               <resolution>0.02</resolution>
            </range>
         </ray>
@@ -49,10 +49,10 @@
            <gaussianNoise>0.005</gaussianNoise>
            <alwaysOn>true</alwaysOn>
            <updateRate>50</updateRate>
-           <topicName>ultrasonic_sensor_scan</topicName>
-           <frameName>ultrasonic_sensor_link</frameName>
+           <topicName>ultrasonic_sensor_5/reading</topicName>
+           <frameName>ultrasonic_sensor_5_link</frameName>
            <radiation>ultrasonic</radiation>
-           <fov>0.26</fov>
+           <fov>0.17452</fov>
         </plugin>
       </sensor>
 
