@@ -58,7 +58,7 @@ rostopic list
 ```
 and make sure that data is being published to the following topics:
 ```
-/bumper/raw # You will need to drag an object towards the bumper for it to start publishing data
+/bumper/raw
 /laser/scan
 /ultrasonic_sensor_1/reading
 /ultrasonic_sensor_2/reading
