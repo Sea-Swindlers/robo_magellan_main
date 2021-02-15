@@ -23,6 +23,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
+            <scale>0.2 0.2 0.2</scale>
             <submesh>
               <name>Body</name>
               <center>false</center>
@@ -41,7 +42,7 @@
         <pose>0.2 0.0 0.335 0 0 0</pose>
         <geometry>
           <box>
-            <size>1.34 1.65746 0.06</size>
+            <size> 0.268 0.331492 0.012 </size>
           </box>
         </geometry>
       </collision>
@@ -49,7 +50,7 @@
         <pose>-1.0 0.0 0.921 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>1.04609 1.6998 0.01</size>
+            <size> 0.209218 0.33996 0.002 </size>
           </box>
         </geometry>
       </collision>
@@ -57,7 +58,7 @@
         <pose>-0.495 0.0 1.06 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>0.05 1.69982 0.27</size>
+            <size> 0.01 0.33996400000000004 0.054000000000000006 </size>
           </box>
         </geometry>
       </collision>
@@ -65,7 +66,7 @@
         <pose>-1.465 0.0 1.06 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>0.05 1.69982 0.27</size>
+            <size> 0.01 0.33996400000000004 0.054000000000000006 </size>
           </box>
         </geometry>
       </collision>
@@ -73,7 +74,7 @@
         <pose>-0.97 0.82491 1.06 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>1.04609 0.05 0.27</size>
+            <size> 0.209218 0.01 0.054000000000000006 </size>
           </box>
         </geometry>
       </collision>
@@ -81,7 +82,7 @@
         <pose>-0.97 -0.82491 1.06 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>1.04609 0.05 0.27</size>
+            <size> 0.209218 0.01 0.054000000000000006 </size>
           </box>
         </geometry>
       </collision>
@@ -89,7 +90,7 @@
         <pose>0.0 0.0 0.62 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.52167 1.37206 0.53369</size>
+            <size> 0.104334 0.274412 0.106738 </size>
           </box>
         </geometry>
         <surface>
@@ -104,7 +105,7 @@
         <pose>0.0 0.0 0.86 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.52167 1.30 0.1</size>
+            <size> 0.104334 0.26 0.02 </size>
           </box>
         </geometry>
         <surface>
@@ -124,7 +125,7 @@
         <pose>-0.26 0.0 1.125 0.0 -0.2 0.0</pose>
         <geometry>
           <box>
-            <size>0.06 1.37206 0.6</size>
+            <size> 0.012 0.274412 0.12 </size>
           </box>
         </geometry>
       </collision>
@@ -132,7 +133,7 @@
         <pose>1.12 0.0 0.7 0.0 0.0 0.0</pose>
         <geometry>
           <box>
-            <size>0.58 1.3 0.8</size>
+            <size> 0.11599999999999999 0.26 0.16 </size>
           </box>
         </geometry>
       </collision>
@@ -158,7 +159,7 @@
         <pose>0.315 0.0 1.93 0 -1.0 0</pose>
         <geometry>
           <box>
-            <size>0.01299 1.54 0.10226</size>
+            <size> 0.002598 0.308 0.020452 </size>
           </box>
         </geometry>
       </collision>
@@ -166,7 +167,7 @@
         <pose>-0.410 0.0 1.88 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.01299 1.54 0.10226</size>
+            <size> 0.002598 0.308 0.020452 </size>
           </box>
         </geometry>
       </collision>
@@ -210,7 +211,7 @@
         <pose>-0.411 0.04 1.445 0.397 0 0</pose>
         <geometry>
           <box>
-            <size>0.01392 1.557245 0.078</size>
+            <size> 0.002784 0.311449 0.0156 </size>
           </box>
         </geometry>
       </collision>
@@ -218,7 +219,7 @@
         <pose>-0.40 -0.04 1.445 -0.397 0 0</pose>
         <geometry>
           <box>
-            <size>0.01392 1.557245 0.078</size>
+            <size> 0.002784 0.311449 0.0156 </size>
           </box>
         </geometry>
       </collision>
@@ -226,7 +227,7 @@
         <pose>0.55 -0.1 0.4 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.15 0.1</size>
+            <size> 0.12 0.03 0.02 </size>
           </box>
         </geometry>
       </collision>
@@ -234,7 +235,7 @@
         <pose>0.7 -0.05 0.45 0 -0.5 0</pose>
         <geometry>
           <box>
-            <size>0.20 0.05 0.1</size>
+            <size> 0.04 0.01 0.02 </size>
           </box>
         </geometry>
       </collision>
@@ -242,7 +243,7 @@
         <pose>0.798 -0.125 0.478 0 -0.8 0</pose>
         <geometry>
           <box>
-            <size>0.129 0.1 0.05</size>
+            <size> 0.0258 0.02 0.01 </size>
           </box>
         </geometry>
       </collision>
@@ -250,7 +251,7 @@
         <pose>0.8135 -0.05 0.45 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.10 0.05 0.1835</size>
+            <size> 0.02 0.01 0.036699999999999997 </size>
           </box>
         </geometry>
       </collision>
@@ -258,7 +259,7 @@
         <pose>0.84 -0.125 0.45 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.03 0.1 0.1835</size>
+            <size> 0.006 0.02 0.036699999999999997 </size>
           </box>
         </geometry>
       </collision>
@@ -266,7 +267,7 @@
         <pose>0.82 -0.125 0.475 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.03 0.1 0.05</size>
+            <size> 0.006 0.02 0.01 </size>
           </box>
         </geometry>
       </collision>
@@ -275,6 +276,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
+            <scale>0.2 0.2 0.2</scale>
             <submesh>
               <name>Bed</name>
               <center>true</center>
@@ -294,6 +296,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
+            <scale>0.2 0.2 0.2</scale>
             <submesh>
               <name>Tail_Gate</name>
               <center>true</center>
@@ -313,6 +316,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
+            <scale>0.2 0.2 0.2</scale>
             <submesh>
               <name>Brake_Front_Left</name>
               <center>true</center>
@@ -332,6 +336,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
+            <scale>0.2 0.2 0.2</scale>
             <submesh>
               <name>Brake_Front_Right</name>
               <center>true</center>
@@ -350,7 +355,7 @@
         <pose>0.55 -0.1 0.4 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.15 0.1</size>
+            <size> 0.12 0.03 0.02 </size>
           </box>
         </geometry>
         <material>
@@ -364,7 +369,7 @@
         <pose>0.7 -0.05 0.45 0 -0.5 0</pose>
         <geometry>
           <box>
-            <size>0.20 0.05 0.1</size>
+            <size> 0.04 0.01 0.02 </size>
           </box>
         </geometry>
         <material>
@@ -378,7 +383,7 @@
         <pose>0.798 -0.125 0.478 0 -0.8 0</pose>
         <geometry>
           <box>
-            <size>0.129 0.1 0.05</size>
+            <size> 0.0258 0.02 0.01 </size>
           </box>
         </geometry>
         <material>
@@ -392,7 +397,7 @@
         <pose>0.8135 -0.05 0.45 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.10 0.05 0.1835</size>
+            <size> 0.02 0.01 0.036699999999999997 </size>
           </box>
         </geometry>
         <material>
@@ -406,7 +411,7 @@
         <pose>0.84 -0.125 0.45 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.03 0.1 0.1835</size>
+            <size> 0.006 0.02 0.036699999999999997 </size>
           </box>
         </geometry>
         <material>
@@ -420,7 +425,7 @@
         <pose>0.82 -0.125 0.475 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.03 0.1 0.05</size>
+            <size> 0.006 0.02 0.01 </size>
           </box>
         </geometry>
         <material>
@@ -509,7 +514,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
-            <scale>1.003700111 0.886200464 0.886200464</scale>
+            <scale>0.20074002219999998 0.1772400928 0.1772400928</scale>
             <submesh>
               <name>Wheel_Front_Left</name>
               <center>true</center>
@@ -570,7 +575,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
-            <scale>1.003700111 0.886200464 0.886200464</scale>
+            <scale>0.20074002219999998 0.1772400928 0.1772400928</scale>
             <submesh>
               <name>Wheel_Front_Right</name>
               <center>true</center>
@@ -631,7 +636,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
-            <scale>1.003700111 0.886200464 0.886200464</scale>
+            <scale>0.20074002219999998 0.1772400928 0.1772400928</scale>
             <submesh>
               <name>Wheels_Rear_Left</name>
               <center>true</center>
@@ -692,7 +697,7 @@
         <geometry>
           <mesh>
             <uri>model://rm_rover_base/meshes/polaris.dae</uri>
-            <scale>1.003700111 0.886200464 0.886200464</scale>
+            <scale>0.20074002219999998 0.1772400928 0.1772400928</scale>
             <submesh>
               <name>Wheels_Rear_Right</name>
               <center>true</center>
