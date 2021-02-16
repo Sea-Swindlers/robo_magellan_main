@@ -76,5 +76,5 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:$(pwd)/Tools/sitl_gazebo/build
 export GAZEBO_MODEL_DATABASE_URI=""
-roslaunch px4 posix_sitl.launch world:="$RM_WORLDS_PATH/worlds/baylands.world" vehicle:="rover" sdf:="$RM_MODELS_PATH/rm_rover/rm_rover.sdf"
+roslaunch px4 posix_sitl.launch world:="$RM_WORLDS_PATH/rm_baylands.world" vehicle:="rover" sdf:="$RM_MODELS_PATH/rm_rover/rm_rover.sdf"
 ```
