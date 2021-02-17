@@ -7,7 +7,7 @@
 
     <include>
       <uri>model://rm_rplidar</uri>
-      <pose>1.5 0 .5 0 0 0</pose>
+      <pose>0 0 .4 0 0 0</pose>
     </include>
     <joint name="lidar_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -23,7 +23,7 @@
 
     <include>
       <uri>model://rm_zed</uri>
-      <pose>1.6 0 .75 0 0 0</pose>
+      <pose>.2 0 .3 0 0 0</pose>
     </include>
     <joint name="depth_camera_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -39,7 +39,7 @@
 
     <include>
       <uri>model://rm_bumper_sensor</uri>
-      <pose>1.7 0 .3 0 0 0</pose>
+      <pose>0.32 0 0.12 0 0 0</pose>
     </include>
     <joint name="bumper_sensor_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -56,7 +56,7 @@
     <include>
       <name> ultrasonic_sensor_1</name>
       <uri>model://rm_ultrasonic_sensor_1</uri>
-      <pose>1.6 0 .4 0 -0.261799 0</pose>
+      <pose>0.23 -0 0.23 0 -0.261799 0</pose>
     </include>
     <joint name="ultrasonic_sensor_1_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -73,7 +73,7 @@
     <include>
       <name> ultrasonic_sensor_2</name>
       <uri>model://rm_ultrasonic_sensor_2</uri>
-      <pose>1.6 .3 .4 0 -0.261799 0.523599</pose>
+      <pose>0.23 0.15 0.23 0 -0.261799 0.523599</pose>
     </include>
     <joint name="ultrasonic_sensor_2_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -90,7 +90,7 @@
     <include>
       <name> ultrasonic_sensor_3</name>
       <uri>model://rm_ultrasonic_sensor_3</uri>
-      <pose>1.6 -.3 .4 0 -0.261799 -0.523599</pose>
+      <pose>0.23 -0.15 0.23 0 -0.261799 -0.523599</pose>
     </include>
     <joint name="ultrasonic_sensor_3_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
