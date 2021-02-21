@@ -7,7 +7,7 @@
 
     <include>
       <uri>model://rm_rplidar</uri>
-      <pose>0 0 .4 0 0 0</pose>
+      <pose>0 0 .5 0 0 0</pose>
     </include>
     <joint name="lidar_joint" type="revolute">
       <parent>rm_rover_base::base_link</parent>
@@ -138,6 +138,73 @@
       </axis>
     </joint> -->
 
+    <include>
+      <name>rm_webcam_front</name>
+      <uri>model://rm_webcam_front</uri>
+      <pose>.1 0 0.45 0 0 0</pose>
+    </include>
+    <joint name="webcam_front_joint" type="revolute">
+      <parent>rm_rover_base::base_link</parent>
+      <child>rm_webcam_front::webcam_front_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <name>rm_webcam_right</name>
+      <uri>model://rm_webcam_right</uri>
+      <pose>0 -.1 0.45 0 0 -1.57079632679</pose>
+    </include>
+    <joint name="webcam_right_joint" type="revolute">
+      <parent>rm_rover_base::base_link</parent>
+      <child>rm_webcam_right::webcam_right_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <name>rm_webcam_left</name>
+      <uri>model://rm_webcam_left</uri>
+      <pose>0 .1 0.45 0 0 1.57079632679</pose>
+    </include>
+    <joint name="webcam_left_joint" type="revolute">
+      <parent>rm_rover_base::base_link</parent>
+      <child>rm_webcam_left::webcam_left_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <name>rm_webcam_rear</name>
+      <uri>model://rm_webcam_rear</uri>
+      <pose>-.1 0 0.45 0 0 3.14159265359</pose>
+    </include>
+    <joint name="webcam_rear_joint" type="revolute">
+      <parent>rm_rover_base::base_link</parent>
+      <child>rm_webcam_rear::webcam_rear_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
 
   </model>
 </sdf>
