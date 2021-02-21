@@ -1,6 +1,7 @@
 # robo_magellan_main
 ## Installation
-We are using ROS melodic + Gazebo 9. I'll let you figure out how to install them.
+We are using ROS melodic + Gazebo 9. PX4 has [this](https://dev.px4.io/master/en/setup/dev_env_linux_ubuntu.html#rosgazebo) tutorial under the ROS/Gazebo section on how to install both of them. **NOTE: It will create a workspace in the default ~/catkin_ws directory. You might be able to modify the script to install it in another directory.**
+
 Clone this repo into your catkin ws as src
 ```
 cd <RoboMagellan-catkin_ws>
