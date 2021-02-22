@@ -65,6 +65,10 @@ and make sure that data is being published to the following topics:
 /ultrasonic_sensor_2/reading
 /ultrasonic_sensor_3/reading
 /zed/depth/image_raw
+/cameras/webcam_front/image_raw
+/cameras/webcam_right/image_raw
+/cameras/webcam_left/image_raw
+/cameras/webcam_rear/image_raw
 ```
 
 ## Run 
