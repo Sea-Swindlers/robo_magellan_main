@@ -4,17 +4,28 @@ import PIL
 import data_generator as datagen
 
 
+def draw_bounding_box(img: np.ndarray, corners, color = np.array([255, 0, 0])):
+    img[corners[0] : corners[2], corners[1]] = color
+    img[corners[0] : corners[2], corners[3]] = color
+    img[corners[0], corners[1] : corners[3]] = color
+    img[corners[2], corners[1] : corners[3]] = color
+
+
 def main():
+    distraction_spec = datagen.AdditionSpec(image_name="decoys/Fire_hydrant.png", needs_bounding_box=False, center_position=[0.3, 0.7])
+    cone_spec = datagen.AdditionSpec(image_name="cones/cone_1.png", needs_bounding_box=True, center_position=[0.7, 0.3])
     image_spec = datagen.ImageSpec(base_image = "landscapes/landscape_1.jpg",
-                                    cone_image = "cones/cone_1.png",
-                                    cone_size = 0.15,
-                                    cone_center = (0.7, 0.7))
+                                    additions=[cone_spec, distraction_spec])
 
     data_generator = datagen.DataGenerator(image_base_path="/home/david/robo_magellan_main/vision/data")
 
-    output = data_generator.place_cone(image_spec)
+    output = data_generator.get_image_and_bounding_boxes(image_spec)
 
-    plt.imshow(output)
+    print(output[1])
+
+    draw_bounding_box(output[0], output[1][0])
+
+    plt.imshow(output[0])
     # plt.savefig("output.png")
     plt.show()
 
