@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="rm_construction_cone">
-    <link name="link">
+    <link name="rm_construction_cone::link">
       <collision name="collision">
         <geometry>
           <mesh>
@@ -22,7 +22,7 @@
     <plugin name="cone_ground_truth" filename="libgazebo_ros_p3d.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>50.0</updateRate>
-      <bodyName>link</bodyName>
+      <bodyName>rm_construction_cone::link</bodyName>
       <topicName>/cone/ground_truth_state</topicName>
       <gaussianNoise>0.0</gaussianNoise>
       <frameName>world</frameName>
