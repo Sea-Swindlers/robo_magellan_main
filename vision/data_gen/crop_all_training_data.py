@@ -54,14 +54,5 @@ def main(image_base_path="/home/david/robo_magellan_main/vision/data"):
         modified.save(os.path.join(image_base_path, image_path))
 
 
-
-    
-
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
