@@ -7,7 +7,26 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import random
 
+'''
+@David, may I interest you in dataclasses https://docs.python.org/3/library/dataclasses.html. 
 
+>> from dataclasses import dataclass
+>> from typing import Optional
+>> 
+>> @dataclass
+>> class ImageSpec:
+>>     base_image: Optional[str] = None
+>>     cone_image: Optional[str] = None
+>>     cone_center: [float, float] = [0.5, 0.5]
+>>     cone_size: float = 1.0
+>>     cone_angle: float = 0
+>>
+>> image_spec = ImageSpec('temp.png')
+>> print(image_spec.base_image)
+>> temp.png
+
+Also I think I think yolo training takes in bounding boxes (tlbr or tlwh)
+'''
 class AdditionSpec:
     def __init__(self,
                     image_name: str,
