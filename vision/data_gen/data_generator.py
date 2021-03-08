@@ -3,8 +3,9 @@ import os
 import numpy as np
 import PIL
 from PIL import Image
-import cv2
+# import cv2
 import matplotlib.pyplot as plt
+import random
 
 
 class AdditionSpec:
@@ -41,13 +42,41 @@ class ImageSpec:
 
 class DataGenerator:
 
-    def __init__(self, image_base_path, output_size = [512, 512]):
+    def __init__(self, image_base_path, dataset_size: int = 3000, output_size = [512, 512], cones_per_image: int = 1):
         self.image_base_path = image_base_path
         self.output_size = output_size
+        self.specs = self.generate_image_specs(self.image_base_path, dataset_size, cones_per_image)
+
+    def get(self, index: int) -> (np.ndarray, (int, int, int, int)):
+        return self.get_image_and_bounding_boxes(self.specs[index])
+
+    def generate_image_specs(self, base_path: str, dataset_size: int, cones_per_image: int, max_decoys: int = 2) -> [ImageSpec]:
+        random.seed(420)
+        all_landscapes = list(files_within(os.path.join(base_path, "landscapes")))
+        all_cones = list(files_within(os.path.join(base_path, "cones")))
+        all_decoys = list(files_within(os.path.join(base_path, "decoys")))
+        specs = []
+        for i in range(dataset_size):
+            additions = []
+            for addition_num in range(random.randint(0, max_decoys)):
+                additions.append(AdditionSpec(image_name = random.choice(all_decoys),
+                                                center_position= (random.uniform(0, 1), random.uniform(0, 1)),
+                                                size = random.uniform(0.05, 0.5),
+                                                angle = random.uniform(-30, 30),
+                                                recolor = [0, 0, 0],
+                                                needs_bounding_box = False))
+            
+            # place the cone somewhere random in the addition array so it might be occluded by an addition
 
 
-    def get(self, index: int) -> np.ndarray:
-        pass
+            additions.insert(random.randint(0, len(additions)), AdditionSpec(image_name = random.choice(all_cones),
+                                                                                center_position= (random.uniform(0, 1), random.uniform(0, 1)),
+                                                                                size = random.uniform(0.1, 0.5),
+                                                                                angle = random.uniform(-30, 30),
+                                                                                recolor = [0, 0, 0],
+                                                                                needs_bounding_box = True))
+            specs.append(ImageSpec(base_image=all_landscapes[i % len(all_landscapes)], additions=additions))
+            
 
     
     def get_image_and_bounding_boxes(self, image_spec: ImageSpec):
@@ -102,3 +131,12 @@ class DataGenerator:
         base_image[top_corner_y : bottom_corner_y, top_corner_x : bottom_corner_x] += cone_image_no_transparency * transparency_mask[:, :, np.newaxis]
 
         return base_image, [top_corner_y, top_corner_x, bottom_corner_y, bottom_corner_x]
+
+
+# from https://codereview.stackexchange.com/questions/153029/recursively-list-files-within-a-directory
+def files_within(directory_path):
+    for dirpath, dirnames, filenames in os.walk(directory_path):
+        for file_name in filenames:
+            if file_name.lower().endswith("jpg") or file_name.lower().endswith("png"):
+                relative_path = os.path.join(dirpath[len(directory_path): ], file_name)
+                yield relative_path if relative_path[0] != "/" else relative_path[1:]
